@@ -1,0 +1,178 @@
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{ 
+    padding: 10px 0 ;
+}
+
+.col{
+    width: 25%;
+}
+
+.col h4{
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.col h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -10px;
+    background: var(--main-color);
+}
+
+.col ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.col ul li a{
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+}
+
+.col ul li a:hover{
+    color: var(--text-color);
+    transform: translateX(-12px);
+}
+
+*{
+    
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+.contactheader {
+      background-color: midnightblue;
+      text-align: center;
+      padding: 30px;
+      color: aliceblue;
+}
+    
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background-color: #161843;
+}
+
+.logo{
+    color: var(--main-color);
+    font-weight:600;
+    font-size: 2.4rem;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+    transition: .4s;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+
+* {
+      box-sizing: border-box;
+}
+
+
+    
+:root{
+    --main-color:#e77a5c;
+    --text-color:#fff;
+    --bg-color:#307a39;
+    --big-font:5rem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+}
+
+#menu-icon{
+    font-size: 2rem ;
+    cursor: pointer;
+    display: none;
+}
+
+ .parallax{
+    background-image: url("parallax3.webp");
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    opacity: 0.65;
+  }
+.parallax1{
+    background-image: url("parallax5.jpg");
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.65;
+  }
+.parallax2{
+    background-image: url("parallax6.jpg");
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.65;
+  }
+.contactpara{
+    color: #777;
+    background-color:aliceblue;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+  }
+  

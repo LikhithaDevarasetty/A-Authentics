@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #d6e6ff;
+        }
+
+        .topnav {
+            background-color: #e5d4ef;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .topnav ul li {
+            list-style-type: none;
+            padding: 10px 30px;
+        }
+
+        .topnav ul li:hover {
+            color: orange;
+            background-color: #d6e6ff;
+        }
+
+        .topnav ul {
+            display: flex;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+            margin-top: 0%;
+        }
+
+
+        .rightcolumn {
+            float: right;
+            width: 25%;
+            background-color: #d6e6ff;
+            padding-left: 20px;
+            margin-top: 0%;
+        }
+
+        .card {
+            padding: 20px;
+            margin-top: 20px;
+            top: 0px;
+            border-radius: 40px;
+        }
+
+        .navitems ul {
+            list-style-type: none;
+            padding: 0;
+            background-color:#d6e6ff;
+            float: none;
+            height: 100%;
+
+        }
+
+        .row {
+            width: 80%;
+        }
+
+        .navitems {
+            width: 15%;
+            position: relative;
+            z-index: 0;
+        }
+
+        .mix {
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            margin-right: 40px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .navitems li a {
+            
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+
+        }
+        .navitems ul{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navitems ul li{
+            padding: 15px;
+            
+        }
+        .navitems li a.active {
+            background-color: #b8e0d4;
+            color: white;
+
+        }
+
+        .navitems a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        @media screen and (max-width: 760px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 80%;
+                padding: 0;
+                margin-left: 20%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+  <div class="topnav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Online Order</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="mix">
+        <div class="navitems">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="online_order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card" style="background-color: #fff0d4;">
+                    <h2>VEG</h2>
+                    <p><br>Momos<br><br>Veg Fried Rice<br><br>Panner Tikka<br><br>Gobi Manchuria</p>
+                </div>
+                <div class="card" style="background-color: #ffffea;">
+                    <h2>NON-VEG</h2>
+                    <p><br>Chicken Biryani<br><br>Chicken Wings<br><br>Chicken Pizza</p>
+
+                </div>
+                <div class="card" style="background-color: #d7f9f8;">
+                    <h2>DESSERTS</h2>
+                    <p><br>Choco-bar<br><br>Nutty-Bar<br><br>Butterscoch<br><br>Vanilla</p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card" style="background-color: #e4d3fc;">
+                    <h2>About Me<br><br></h2>
+                    <img src="pngwing.com2.png" height="120px" width="80%">
+                    <p><br><br>A website to take out or have fun with friends....</p>
+                </div>
+                <div class="card" style="background-color: #fff6ea;">
+                    <h3>Popular Post</h3>
+                    <img src="pngwing.com (1).png" height="120px" width="80%"><br><br>
+                    <img src="pngwing.com (2).png" height="120px" width="80%">
+                </div>
+            </div>
+        </div>
+        </div>
+    <br><br>
+    <center><img src="pngwing.com.png" width="60%" height="130px"></img></center>
+
+
+</body>
+
+</html>

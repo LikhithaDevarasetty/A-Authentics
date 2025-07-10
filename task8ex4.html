@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .slider-container {
+      width: 500px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+    .slider-image {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .radio-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .slider-radio {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .slider-radio:checked {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <img class="slider-image" src="paneerbir1.jpg" alt="Image 1">
+    <img class="slider-image" src="pizza.jpg" alt="Image 2">
+    <img class="slider-image" src="pepsi1.jpg" alt="Image 3">
+  </div>
+  <div class="radio-container">
+    <input class="slider-radio" type="radio" name="slider" checked>
+    <input class="slider-radio" type="radio" name="slider">
+    <input class="slider-radio" type="radio" name="slider">
+  </div>
+  <script>
+    const images = document.querySelectorAll('.slider-image');
+    const radios = document.querySelectorAll('.slider-radio');
+    let currentSlide = 0;
+    function showSlide(slideIndex) {
+      for (let i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+      for (let i = 0; i < radios.length; i++) {
+        radios[i].checked = false;
+      }
+      images[slideIndex].style.display = 'block';
+      radios[slideIndex].checked = true;
+    }
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % images.length;
+      showSlide(currentSlide);
+    }
+    function previousSlide() {
+      currentSlide = (currentSlide - 1 + images.length) % images.length;
+      showSlide(currentSlide);
+    }
+    radios.forEach((radio, index) => {
+      radio.addEventListener('click', () => {
+        showSlide(index);
+      });
+    });
+    setInterval(nextSlide, 1000); 
+  </script>
+</body>
+</html>
+
